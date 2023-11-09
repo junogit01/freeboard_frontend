@@ -29,6 +29,7 @@ const CREATE_BOARD = gql`
     createBoard(createBoardInput: $createBoardInput) {
       _id
       writer
+      contetns
     }
   }
 `;
