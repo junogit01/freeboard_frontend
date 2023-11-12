@@ -14,7 +14,7 @@ import {
   Title,
   Wrapper,
   Writer,
-} from "../../styles/boardcss";
+} from "../../../styles/boardcss";
 
 export const FETCH_BOARD = gql`
   query fetchBoard($boardId: ID!) {
