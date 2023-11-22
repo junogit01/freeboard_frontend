@@ -21,8 +21,12 @@ export default function BoardDetailUI(props) {
       <S.BottomWrapper>
         <S.Button onClick={props.onClickToList}>목록으로</S.Button>
         <S.Button>수정하기</S.Button>
-        <S.Button onClick={props.onClickDelete}>삭제하기</S.Button>
-        <div>{props.board}</div>
+        <S.Button
+          id={props.data?.fetchBoard?._id}
+          onClick={props.onClickDelete}
+        >
+          삭제하기
+        </S.Button>
       </S.BottomWrapper>
     </S.Wrapper>
   );
