@@ -164,6 +164,5 @@ export const SubmitButton = styled.button`
   margin-left: 12px;
   margin-right: 12px;
   cursor: pointer;
-
-  background-color: yellow;
+  background-color: ${(props) => (props.isActive === true ? "green" : "")};
 `;

@@ -1,5 +1,5 @@
 import BoardListUI from "./BoardList.presenter";
-import { useQuery } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import { useRouter } from "next/router";
 import { FETCH_BOARDS } from "./BoardList.queries";
 
@@ -14,6 +14,7 @@ export default function BoardList() {
   const onClickToBoardDetail = (event) => {
     router.push(`/boards/${event.target.id}`);
   };
+
   return (
     <div>
       <BoardListUI

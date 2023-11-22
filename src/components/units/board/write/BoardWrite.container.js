@@ -6,6 +6,7 @@ import BoardWriteUI from "./BoardWrite.presenter";
 
 export default function BoardWrite() {
   const router = useRouter();
+  const [isActive, setIsActive] = useState(false);
   const [writer, setWriter] = useState("");
   const [password, setPassword] = useState("");
   const [title, setTitle] = useState("");
@@ -27,36 +28,133 @@ export default function BoardWrite() {
   const [createBoard] = useMutation(CREATE_BOARD);
 
   function handleChangeName(event) {
-    const value = event.target.value;
-    setWriter(value);
+    setWriter(event.target.value);
+
+    if (
+      event.target.value &&
+      writer &&
+      password &&
+      title &&
+      contents &&
+      zip &&
+      address1 &&
+      address2 &&
+      link
+    ) {
+      setIsActive(true);
+    }
   }
   function handleChangePassword(event) {
-    const value = event.target.value;
-    setPassword(value);
+    setPassword(event.target.value);
+    if (
+      event.target.value &&
+      writer &&
+      password &&
+      title &&
+      contents &&
+      zip &&
+      address1 &&
+      address2 &&
+      link
+    ) {
+      setIsActive(true);
+    }
   }
   function handleChangePostName(event) {
-    const value = event.target.value;
-    setTitle(value);
+    setTitle(event.target.value);
+    if (
+      event.target.value &&
+      writer &&
+      password &&
+      title &&
+      contents &&
+      zip &&
+      address1 &&
+      address2 &&
+      link
+    ) {
+      setIsActive(true);
+    }
   }
   function handleChangeContents(event) {
-    const value = event.target.value;
-    setContents(value);
+    setContents(event.target.value);
+    if (
+      event.target.value &&
+      writer &&
+      password &&
+      title &&
+      contents &&
+      zip &&
+      address1 &&
+      address2 &&
+      link
+    ) {
+      setIsActive(true);
+    }
   }
   function handleChangeZip(event) {
-    const value = event.target.value;
-    setZIp(value);
+    setZIp(event.target.value);
+    if (
+      event.target.value &&
+      writer &&
+      password &&
+      title &&
+      contents &&
+      zip &&
+      address1 &&
+      address2 &&
+      link
+    ) {
+      setIsActive(true);
+    }
   }
   function handleChangeAddress1(event) {
-    const value = event.target.value;
-    setAddress1(value);
+    setAddress1(event.target.value);
+    if (
+      event.target.value &&
+      writer &&
+      password &&
+      title &&
+      contents &&
+      zip &&
+      address1 &&
+      address2 &&
+      link
+    ) {
+      setIsActive(true);
+    }
   }
   function handleChangeAddress2(event) {
-    const value = event.target.value;
-    setAddress2(value);
+    setAddress2(event.target.value);
+    if (
+      event.target.value &&
+      writer &&
+      password &&
+      title &&
+      contents &&
+      zip &&
+      address1 &&
+      address2 &&
+      link
+    ) {
+      setIsActive(true);
+    }
   }
   function handleChangeLink(event) {
-    const value = event.target.value;
-    setLink(value);
+    setLink(event.target.value);
+    if (
+      event.target.value &&
+      writer &&
+      password &&
+      title &&
+      contents &&
+      zip &&
+      address1 &&
+      address2 &&
+      link
+    ) {
+      setIsActive(true);
+    }
   }
 
   const handleClickRegister = async () => {
@@ -114,7 +212,6 @@ export default function BoardWrite() {
   };
   return (
     <div>
-      <div>컨테이너</div>
       <BoardWriteUI
         errorWriter={errorWriter}
         errorPassword={errorPassword}
@@ -133,6 +230,7 @@ export default function BoardWrite() {
         handleChangeAddress2={handleChangeAddress2}
         handleChangeLink={handleChangeLink}
         handleClickRegister={handleClickRegister}
+        isActive={isActive}
       />
     </div>
   );

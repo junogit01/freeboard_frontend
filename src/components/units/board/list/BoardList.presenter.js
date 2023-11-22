@@ -3,8 +3,8 @@ import getDate from "./getDate";
 
 export default function BoardListUI(props) {
   return (
-    <S.Wrapper class="wrapper">
-      <S.Twrap class="table">
+    <S.Wrapper>
+      <S.Twrap>
         <S.Table>
           <S.THNumber>번호</S.THNumber>
           <S.THTitle>제목</S.THTitle>
